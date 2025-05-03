@@ -9,17 +9,26 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      textAlign: TextAlign.center,
       style: const TextStyle(color: Colors.white),
       decoration: InputDecoration(
         labelText: tag,
-        labelStyle: const TextStyle(color: Colors.white), // color del texto
+        labelStyle: const TextStyle(color: Colors.white),
+        hintText: "Enter your $tag",
+        hintStyle: TextStyle(color: Colors.grey),
         enabledBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.white), // color linea debajo sin seleccionarse
+          borderSide: BorderSide(color: Colors.white),
         ),
         focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.black), // color linea debajo cuando se selecciona
+          borderSide: BorderSide(color: Colors.black),
         ),
       ),
+      validator: (x) {
+        if (x == null || x.isEmpty) {
+          return 'Por favor ingresa un valor';
+        }
+        return null;
+      },
     );
   }
 }

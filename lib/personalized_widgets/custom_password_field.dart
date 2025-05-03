@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
 
 class CustomPasswordField extends StatefulWidget {
-  const CustomPasswordField({super.key}); //constructor
+  const CustomPasswordField({super.key});
 
   @override
-  State<CustomPasswordField> createState() => _CustomPasswordFieldState(); //privado
+  State<CustomPasswordField> createState() => _CustomPasswordFieldState();
 }
 
-class _CustomPasswordFieldState extends State<CustomPasswordField> {
-  
+bool obscureText = true;
 
+class _CustomPasswordFieldState extends State<CustomPasswordField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-
-      style: const TextStyle(color: Colors.white), // color del texto ingresado
+      obscureText: obscureText, // true or false
+      textAlign: TextAlign.center,
+      style: const TextStyle(color: Colors.white),
       decoration: InputDecoration(
         labelText: 'Password',
-        labelStyle: const TextStyle(color: Colors.white), // color de la palabra password
+        labelStyle: const TextStyle(color: Colors.white),
+        hintText: "Enter your password",
+        hintStyle: TextStyle(color: Colors.grey),
         enabledBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.white),
         ),
@@ -25,13 +28,11 @@ class _CustomPasswordFieldState extends State<CustomPasswordField> {
           borderSide: BorderSide(color: Colors.black),
         ),
         suffixIcon: IconButton( //ícono al final del campo de texto
-          icon: Icon(
-             Icons.visibility, //materia dart
-            color: Colors.white,
-          ),
-          onPressed: () { 
-
-            
+          icon: Icon(obscureText ? Icons.visibility : Icons.visibility_off, color: Colors.white),
+          onPressed: () {
+            setState(() { // actualiza la interfaz DE usuario 
+              obscureText = !obscureText;
+            });
           },
         ),
       ),
