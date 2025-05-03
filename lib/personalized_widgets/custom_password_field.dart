@@ -15,10 +15,10 @@ class _CustomPasswordFieldState extends State<CustomPasswordField> {
     return TextFormField(
       obscureText: obscureText, // true or false
       textAlign: TextAlign.center,
-      style: const TextStyle(color: Colors.white),
+      style: const TextStyle(color: Colors.white, fontSize: 22),
       decoration: InputDecoration(
         labelText: 'Password',
-        labelStyle: const TextStyle(color: Colors.white),
+        labelStyle: const TextStyle(color: Colors.white, fontSize: 22),
         hintText: "Enter your password",
         hintStyle: TextStyle(color: Colors.grey),
         enabledBorder: const UnderlineInputBorder(

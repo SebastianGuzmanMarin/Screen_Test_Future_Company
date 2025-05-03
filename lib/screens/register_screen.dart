@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screean_test_future_company/components/image_example.dart';
 import 'package:screean_test_future_company/screens/confirmation_screen.dart';
 import '../personalized_widgets/custom_text_field.dart';
 import '../personalized_widgets/custom_password_field.dart';
@@ -30,13 +31,13 @@ class RegisterScreen extends StatelessWidget {
             ),
             const Icon(Icons.security, color: Colors.white, size: 100),
             const Align(
-              alignment: Alignment.topLeft,
+              alignment: Alignment.topCenter,
               child: Text(
                 'REGISTER',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 30,
                   color: Colors.white,
-                  fontWeight: FontWeight.w500, //negrilla 900 weight
+                  fontWeight: FontWeight.w900, //negrilla 900 weight
                 ),
               ),
             ),
@@ -62,10 +63,26 @@ class RegisterScreen extends StatelessWidget {
               ),
               child: const Text(
                 'CREATE ACCOUNT',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.white, fontSize: 20)
               ),
             ),
-            SizedBox(height: 250),
+            SizedBox(height: 150),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context) => ImageExample()));},
+              style: ElevatedButton.styleFrom(
+                backgroundColor:Colors.transparent, // si no se asigna, por defecto queda blanco
+                side: const BorderSide(
+                  color: Colors.white,
+                  width: 1,),
+                elevation: 0,
+                shape: StadiumBorder(),
+              ),
+              child: const Text(
+                'Show image',
+                style: TextStyle(color: Colors.white, fontSize: 20)
+              ),
+            )
           ],
         ),
       ),

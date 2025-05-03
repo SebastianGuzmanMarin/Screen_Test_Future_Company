@@ -29,12 +29,13 @@ class ConfirmationScreen extends StatelessWidget {
             const Align(
               alignment: Alignment.center,
               child: Text(
-                "Welcome",
+                "Welcome Sebastian,\n You are in the safe zone :)",
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 34,
                 ),
+                textAlign: TextAlign.center,
               ),
             ),
           SizedBox(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // diseño y estilo personalizado de un (TextFormField)
 class CustomText extends StatelessWidget {
-  final String tag; // etiquetas
+  final String tag;
 
   const CustomText({super.key, required this.tag});
 
@@ -10,10 +10,10 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       textAlign: TextAlign.center,
-      style: const TextStyle(color: Colors.white),
+      style: const TextStyle(color: Colors.white, fontSize: 22),
       decoration: InputDecoration(
         labelText: tag,
-        labelStyle: const TextStyle(color: Colors.white),
+        labelStyle: const TextStyle(color: Colors.white, fontSize: 22),
         hintText: "Enter your $tag",
         hintStyle: TextStyle(color: Colors.grey),
         enabledBorder: const UnderlineInputBorder(
