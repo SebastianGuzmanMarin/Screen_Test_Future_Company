@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'screens/register_screen.dart';
+import 'package:screean_test_future_company/screens/register_screen.dart';
+import 'package:screean_test_future_company/screens/text_field_screen_test.dart';
+//import 'screens/register_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RegisterScreen(), //RegisterScreen(),
+      home: RegisterScreen (), //RegisterScreen(),
     );
   }
 }

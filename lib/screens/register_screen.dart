@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:screean_test_future_company/components/image_example.dart';
 import 'package:screean_test_future_company/screens/confirmation_screen.dart';
+import 'package:screean_test_future_company/screens/text_field_screen_test.dart';
+//import 'package:screean_test_future_company/screens/confirmation_screen.dart';
 import '../personalized_widgets/custom_text_field.dart';
 import '../personalized_widgets/custom_password_field.dart';
 
@@ -47,7 +49,7 @@ class RegisterScreen extends StatelessWidget {
             const CustomPasswordField(),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,MaterialPageRoute(builder: (context) => ConfirmationScreen()));
+                Navigator.push(context,MaterialPageRoute(builder: (context) => ConfirmationScreen(nombre: "")));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor:
@@ -66,7 +68,7 @@ class RegisterScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.white, fontSize: 20)
               ),
             ),
-            SizedBox(height: 150),
+            SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context,MaterialPageRoute(builder: (context) => ImageExample()));},
@@ -79,7 +81,24 @@ class RegisterScreen extends StatelessWidget {
                 shape: StadiumBorder(),
               ),
               child: const Text(
-                'Show image',
+                'Show images',
+                style: TextStyle(color: Colors.white, fontSize: 20)
+              ),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context) => TextFieldScreenTest()));},
+              style: ElevatedButton.styleFrom(
+                backgroundColor:Colors.transparent, // si no se asigna, por defecto queda blanco
+                side: const BorderSide(
+                  color: Colors.white,
+                  width: 2,),
+                elevation: 0,
+                shape: StadiumBorder(),
+              ),
+              child: const Text(
+                'Second Register Screen',
                 style: TextStyle(color: Colors.white, fontSize: 20)
               ),
             )

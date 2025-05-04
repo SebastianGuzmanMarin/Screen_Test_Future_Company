@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ConfirmationScreen extends StatelessWidget {
-  const ConfirmationScreen({super.key});
+  const ConfirmationScreen({super.key, required this.nombre, });
+
+  final String nombre;
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +30,10 @@ class ConfirmationScreen extends StatelessWidget {
             SizedBox(
             ),
             const Icon(Icons.verified_user, color: Colors.white, size: 150),
-            const Align(
+            Align(
               alignment: Alignment.center,
               child: Text(
-                "Welcome Sebastian,\n You are in the safe zone :)",
+                "Welcome $nombre ,\nYou are in the safe zone :)",
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
