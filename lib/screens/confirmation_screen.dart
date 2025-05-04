@@ -10,7 +10,7 @@ class ConfirmationScreen extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         color:  Colors.green,
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(40),
         child:
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

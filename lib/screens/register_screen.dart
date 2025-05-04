@@ -14,7 +14,7 @@ class RegisterScreen extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(40),
         decoration: BoxDecoration(color: Colors.blue),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
