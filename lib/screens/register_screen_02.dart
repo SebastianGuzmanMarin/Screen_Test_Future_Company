@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:screean_test_future_company/components/image_example.dart';
-import 'package:screean_test_future_company/screens/confirmation_screen.dart';
-import 'package:screean_test_future_company/screens/text_field_screen_test.dart';
+import 'package:screean_test_future_company/screens/confirmation_screen_03.dart';
+
 //import 'package:screean_test_future_company/screens/confirmation_screen.dart';
 import '../personalized_widgets/custom_text_field.dart';
 import '../personalized_widgets/custom_password_field.dart';
@@ -53,14 +52,12 @@ class RegisterScreen extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor:
-                    Colors
-                        .transparent, // si no se asigna, por defecto queda blanco
+                    Colors.transparent, // si no se asigna, por defecto queda blanco
                 side: const BorderSide(
                   color: Colors.white,
                   width: 1,
-                ), //color del borde
-                elevation:
-                    0, // sombra, si no se coloca la traer por defecto, se ve oscuro
+                ), 
+                elevation:0, 
                 shape: RoundedRectangleBorder(), // bordes cuadrados
               ),
               child: const Text(
@@ -69,39 +66,6 @@ class RegisterScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,MaterialPageRoute(builder: (context) => ImageExample()));},
-              style: ElevatedButton.styleFrom(
-                backgroundColor:Colors.transparent, // si no se asigna, por defecto queda blanco
-                side: const BorderSide(
-                  color: Colors.white,
-                  width: 1,),
-                elevation: 0,
-                shape: StadiumBorder(),
-              ),
-              child: const Text(
-                'Show images',
-                style: TextStyle(color: Colors.white, fontSize: 20)
-              ),
-            ),
-            SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,MaterialPageRoute(builder: (context) => TextFieldScreenTest()));},
-              style: ElevatedButton.styleFrom(
-                backgroundColor:Colors.transparent, // si no se asigna, por defecto queda blanco
-                side: const BorderSide(
-                  color: Colors.white,
-                  width: 2,),
-                elevation: 0,
-                shape: StadiumBorder(),
-              ),
-              child: const Text(
-                'Second Register Screen',
-                style: TextStyle(color: Colors.white, fontSize: 20)
-              ),
-            )
           ],
         ),
       ),
