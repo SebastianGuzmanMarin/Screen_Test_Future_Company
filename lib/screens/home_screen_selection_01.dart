@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screean_test_future_company/components/text_styles.dart';
 import 'package:screean_test_future_company/screens/image_example_02.dart';
 import 'package:screean_test_future_company/screens/imc_home_screen_02.dart';
 import 'package:screean_test_future_company/screens/register_screen_02.dart';
@@ -17,18 +18,18 @@ class HomeScreenSelection extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => RegisterScreen()));},
-              child: Text('Register Screen First', style: TextStyle(color: Colors.black, fontSize: 20),),),
+              child: Text('Register Screen First', style: TextStyles.bodyTextHomeScreen,),),
             SizedBox(height: 10),
             ElevatedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => TextFieldScreenTest()));}, 
-              child: Text('Text Field Screen Test', style: TextStyle(color: Colors.black, fontSize: 20))),
+              child: Text('Text Field Screen Test', style: TextStyles.bodyTextHomeScreen)),
             SizedBox(height: 10),
             ElevatedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => ImageExample()));}, 
-              child: Text('images Example', style: TextStyle(color: Colors.black, fontSize: 20))),
+              child: Text('images Example', style: TextStyles.bodyTextHomeScreen)),
             SizedBox(height: 10),
             ElevatedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => ImcCalculatorHome()));}, 
-              child: Text('IMC Screen', style: TextStyle(color: Colors.black, fontSize: 20))),
+              child: Text('IMC Screen', style: TextStyles.bodyTextHomeScreen)),
             SizedBox(height: 10),
-            ElevatedButton(onPressed: () {null;}, child: Text('none button', style: TextStyle(color: Colors.black, fontSize: 20))),
+            ElevatedButton(onPressed: () {null;}, child: Text('none button', style: TextStyles.bodyTextHomeScreen)),
           ],
         ),
       ),

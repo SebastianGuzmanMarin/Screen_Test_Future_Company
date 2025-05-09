@@ -40,7 +40,7 @@ final TextEditingController _nameController = TextEditingController();
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ConfirmationScreen(nombre: name),
+                      builder: (context) => ConfirmationScreen(nombre: name, apellido: '', email: '',),
                     ),
                   );
                 },
