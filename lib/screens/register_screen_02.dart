@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:screean_test_future_company/components/text_styles.dart';
 import 'package:screean_test_future_company/screens/confirmation_screen_03.dart';
-
-//import 'package:screean_test_future_company/screens/confirmation_screen.dart';
 import '../personalized_widgets/custom_text_field.dart';
 import '../personalized_widgets/custom_password_field.dart';
 
