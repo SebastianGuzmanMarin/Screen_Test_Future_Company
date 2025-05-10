@@ -18,15 +18,24 @@ class _GenderSelectorState extends State<GenderSelector> {
       children: [
         //!man
         Expanded(
-          child: GestureDetector( // /todo widget es clicleable si se wrapea un un gesturedetector
-          onTap: (){
-            setState(() { // esto modifica la UI , Esto hace que el statefull cambie
-              selectedGender = "MAN";
-            });
-          },
+          child: GestureDetector(
+            // /todo widget es clicleable si se wrapea un un gesturedetector
+            onTap: () {
+              setState(() {
+                // esto modifica la UI , Esto hace que el statefull cambie
+                selectedGender = "MAN";
+              });
+            },
             child: Padding(
-              padding: const EdgeInsets.only(left: 16, top: 16, bottom: 16, right: 8),
-              child: Container( //contenedor tiene una columna, la columna tiene el incono y el nombre
+              padding: const EdgeInsets.only(
+                left: 16,
+                top: 16,
+                bottom: 16,
+                right: 8,
+              ),
+              child: AnimatedContainer(
+                //contenedor tiene una columna, la columna tiene el incono y el nombre
+                duration: const Duration(milliseconds: 500),
                 decoration: BoxDecoration(
                   color:
                       selectedGender == "MAN"
@@ -35,7 +44,9 @@ class _GenderSelectorState extends State<GenderSelector> {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(25), // margenes de la columna con el contenedor
+                  padding: const EdgeInsets.all(
+                    25,
+                  ), // margenes de la columna con el contenedor
                   child: Column(
                     children: [
                       Image.asset("assets/images/male.png", height: 150),
@@ -54,14 +65,21 @@ class _GenderSelectorState extends State<GenderSelector> {
         //!WOMAN
         Expanded(
           child: GestureDetector(
-            onTap: (){
+            onTap: () {
               setState(() {
                 selectedGender = "WOMAN";
               });
             },
             child: Padding(
-              padding: const EdgeInsets.only(left: 8, top: 16, bottom: 16, right: 16),
-              child: Container(
+              padding: const EdgeInsets.only(
+                left: 8,
+                top: 16,
+                bottom: 16,
+                right: 16,
+              ),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 500),
+
                 decoration: BoxDecoration(
                   color:
                       selectedGender == "WOMAN"

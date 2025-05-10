@@ -10,13 +10,14 @@ class RegisterScreen extends StatefulWidget {
   State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-final _formKey = GlobalKey<FormState>();
-final TextEditingController _nameController = TextEditingController();
-final TextEditingController _lastNameController = TextEditingController();
-final TextEditingController _emailController = TextEditingController();
+
 // se inicializan las variables  de los controller, pero solo el texediting
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  final _formKey = GlobalKey<FormState>();
+final TextEditingController _nameController = TextEditingController();
+final TextEditingController _lastNameController = TextEditingController();
+final TextEditingController _emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,20 +76,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               CustomText(
                 tag: 'Email',
-                controller: _emailController,
+                controller: _emailController, // se asignan los controladores en cada widget personalizado
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
                     return 'Please enter your name email';
                   }
                   return null;
                 },
-              ), // se asignan los controladores en cada widget personalizado
+              ), 
               CustomPasswordField(),
               ElevatedButton(
                 onPressed: () {
-                  // se envian los datos a la siguiente ventana
                   if (_formKey.currentState!.validate()) {
-                    // Si todos los campos son válidos, continúa
                     final name = _nameController.text;
                     final lastName = _lastNameController.text;
                     final email = _emailController.text;
@@ -105,8 +104,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     );
                   } else {
                     showDialog(
-                      context: context, // donde mostrarlo
-                      builder: (BuildContext context) { // qué mostrar
+                      context: context,
+                      builder: (BuildContext context) { 
                         return AlertDialog(
                           title: Text("ALERT"),
                           content: Text("Please complete all fields"),
@@ -115,7 +114,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               onPressed: () {
                                 Navigator.of(
                                   context,
-                                ).pop(); // Cierra el diálogo
+                                ).pop(); 
                               },
                               child: Text("OK"),
                             ),
